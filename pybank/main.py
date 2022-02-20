@@ -5,7 +5,7 @@ import csv
 readfile = os.path.join("resources", "budget_data.csv")
 
 # Define output file location and name
-outputfile = os.path.join("analysis", "budget_analysis.csv")
+outputfile = os.path.join("analysis", "budget_analysis.txt")
 
 datecol = []
 # P & L value
@@ -46,23 +46,39 @@ with open(readfile, "r") as budget_datafile:
     minDecreaseMonth = datecol[minDecreaseIndex]
     minDecrease = "${:.0f}".format(min(plvar))
 
+    # Uniform output
+    line01Text = "Financial Analysis"
+    lineBreak = "-------------------------------------------"
+    line02Text = f"Total Months: {countmth}"
+    line03Text = f"Total: {sumplval}"
+    line04Text = f"Average Change: {sumplvar}"
+    line05Text = f"Greatest Increase in Profits: {maxIncreaseMonth} ({maxIncrease})"
+    line06Text = f"Greatest Decrease in Profits: {minDecreaseMonth} ({minDecrease})"
+
+
     # Print output to screen
-    print("Finacial Analysis")
-    print("-------------------------------------------")
-    print(f"Total Months: {countmth}")
-    print(f"Total: {sumplval}")
-    print(f"Average Change: {sumplvar}")
-    print(f"Greatest Increase in Profits: {maxIncreaseMonth} ({maxIncrease})")
-    print(f"Greatest Decrease in Profits: {minDecreaseMonth} ({minDecrease})")
+    print(line01Text)
+    print(lineBreak)
+    print(line02Text)
+    print(line03Text)
+    print(line04Text)
+    print(line05Text)
+    print(line06Text)
 
 # Write output to file 
-with open(outputfile, "w", encoding='UTF8', newline='') as budget_analysisfile:
-    writer = csv.writer(budget_analysisfile)
-    writer.writerow(["Financial Analysis"])
-    writer.writerow(["Total Months:", countmth])
-    writer.writerow(["Total:", sumplval])
-    writer.writerow(["Average Change: ", sumplvar])
-    writer.writerow(["Greatest Increase in Profits: ", maxIncreaseMonth, maxIncrease])
-    writer.writerow(["Greatest Decrease in Profits: ", minDecreaseMonth, minDecrease])
-
+with open(outputfile, "w") as btext:
+    btext.write(line01Text)
+    btext.write('\n')
+    btext.write(lineBreak)
+    btext.write('\n')
+    btext.write(line02Text)
+    btext.write('\n')
+    btext.write(line03Text)
+    btext.write('\n')
+    btext.write(line04Text)
+    btext.write('\n')
+    btext.write(line05Text)
+    btext.write('\n')
+    btext.write(line06Text)
+    btext.write('\n')
 # End 
