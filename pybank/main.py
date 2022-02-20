@@ -67,18 +67,11 @@ with open(readfile, "r") as budget_datafile:
 
 # Write output to file 
 with open(outputfile, "w") as btext:
-    btext.write(line01Text)
-    btext.write('\n')
-    btext.write(lineBreak)
-    btext.write('\n')
-    btext.write(line02Text)
-    btext.write('\n')
-    btext.write(line03Text)
-    btext.write('\n')
-    btext.write(line04Text)
-    btext.write('\n')
-    btext.write(line05Text)
-    btext.write('\n')
-    btext.write(line06Text)
-    btext.write('\n')
+    btext.write(line01Text + '\n')
+    btext.write(lineBreak + '\n')
+    btext.write(line02Text + '\n')
+    btext.write(line03Text + '\n')
+    btext.write(line04Text + '\n')
+    btext.write(line05Text + '\n')
+    btext.write(line06Text + '\n')
 # End 
