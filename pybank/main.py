@@ -56,7 +56,7 @@ with open(readfile, "r") as budget_datafile:
     print(f"Greatest Decrease in Profits: {minDecreaseMonth} ({minDecrease})")
 
 # Write output to file 
-with open(outputfile, "w", encoding='UTF8') as budget_analysisfile:
+with open(outputfile, "w", encoding='UTF8', newline='') as budget_analysisfile:
     writer = csv.writer(budget_analysisfile)
     writer.writerow(["Financial Analysis"])
     writer.writerow(["Total Months:", countmth])
