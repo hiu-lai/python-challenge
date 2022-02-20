@@ -36,15 +36,11 @@ with open(sourcefile, "r") as datafile:
 
 # Write to analysis file
 with open(outputfile, "w") as ptext:
-    ptext.writelines(outputHeading)
-    ptext.write('\n')
-    ptext.writelines(lineBreak)
-    ptext.write('\n')
+    ptext.writelines(outputHeading +'\n')
+    ptext.writelines(lineBreak + '\n')
     outputLine = f"{line01Text} {numVoters}"
-    ptext.writelines(outputLine)
-    ptext.write('\n')
-    ptext.writelines(lineBreak)
-    ptext.write('\n')
+    ptext.writelines(outputLine + '\n')
+    ptext.writelines(lineBreak + '\n')
 
  #   print(len(candidateList))
     for candidate in candidateList:
@@ -55,11 +51,9 @@ with open(outputfile, "w") as ptext:
 
         outputLine = f"{candidate}: {VotePercent} ({numVote})"
         print(outputLine)
-        ptext.writelines(outputLine)
-        ptext.write('\n')
+        ptext.writelines(outputLine + '\n')
     print(lineBreak)
-    ptext.writelines(lineBreak)     
-    ptext.write('\n')
+    ptext.writelines(lineBreak + '\n')     
 
     winner = max(numVotePerCandidate)
     winner = numVotePerCandidate.index(winner)
@@ -68,8 +62,7 @@ with open(outputfile, "w") as ptext:
     print(lineBreak)    
 
     outputLine = line99Text + winner
-    ptext.writelines(outputLine)
-    ptext.write('\n')
-    ptext.writelines(lineBreak)
+    ptext.writelines(outputLine + '\n')
+    ptext.writelines(lineBreak + '\n')
 
 # End File
