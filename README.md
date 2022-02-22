@@ -7,7 +7,7 @@ Once the data is downloaded and saved, run script `main.py` located in the **pyB
 ### Output example
 ![alt=""](images/financial_analysis.png)
 
-[budget_analysis.txt](https://github.com/hiu-lai/python-challenge/blob/9c1982f6f30f5af1cacb5d75d3cdfba1052746a6/pybank/analysis/budget_analysis.txt)
+[budget_analysis.txt](pybank/analysis/budget_analysis.txt)
 
 
 ## PyPoll
@@ -17,4 +17,4 @@ Once the data is downloaded and saved, run script `main.py` location directly in
 ### Output example
 ![alt=""](images/election_results.png)
 
-[election_analysis.txt](https://github.com/hiu-lai/python-challenge/blob/6fe3116d4a0d29c62ffe7b0cdd07150c50777a93/pybank/analysis/budget_analysis.txt)
+[election_analysis.txt](PyPoll/analysis/election_analysis.txt)
