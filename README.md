@@ -5,7 +5,7 @@ In order to analyse Financial Records for the company, a CSV file with a columns
 Once the data is downloaded and saved, run script `main.py` located in the **pyBank** folder where it will print a summary to the terminal as well as a summarised text file outputted to **pyBank\analysis**
 
 ### Output example
-[budget_analysis.txt](PyBank/analysis/budget_analysis.txt)
+[budget_analysis.txt](https://github.com/hiu-lai/python-challenge/blob/9c1982f6f30f5af1cacb5d75d3cdfba1052746a6/pybank/analysis/budget_analysis.txt)
 
 ![alt=""](images/financial_analysis.png)
 
